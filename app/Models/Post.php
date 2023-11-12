@@ -21,7 +21,6 @@ class Post extends Model
         'description',
         'user_id',
         'category_id',
-        'review_id',
     ];
 
     protected $hidden = [
@@ -41,6 +40,6 @@ class Post extends Model
 
     public function reviews() : HasMany
     {
-        return $this->hasMany(Review::class, 'id', 'review_id');
+        return $this->hasMany(Review::class, 'post_id', 'id');
     }
 }

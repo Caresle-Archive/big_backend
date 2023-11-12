@@ -24,8 +24,6 @@ class PostFactory extends Factory
             'description' => $this->faker->text(),
             'user_id' => 10,
             'category_id' => Category::factory(),
-            // 'review_id' => Review::factory(),
-            'review_id' => 0,
         ];
     }
 }
