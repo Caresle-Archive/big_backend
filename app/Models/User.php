@@ -30,11 +30,11 @@ class User extends Model
 
     public function posts() : HasMany
     {
-        return $this->hasMany(Post::class, 'id', 'user_id');
+        return $this->hasMany(Post::class, 'user_id', 'id');
     }
 
     public function reviews() : HasMany
     {
-        return $this->hasMany(Review::class,'id', 'user_id');
+        return $this->hasMany(Review::class, 'user_id', 'id');
     }
 }
